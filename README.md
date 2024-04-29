@@ -1,6 +1,6 @@
-# EX.No: 1a  			STUDY OF SOCKET PROGRAMMING
-## REG.NO : 212223240110
+# EX.No: 1a  	STUDY OF SOCKET PROGRAMMING
 ## NAME : NITHYA D
+## REG.NO : 212223240110
 
 ## AIM : 
 To perform a study on Socket Programming.
@@ -71,6 +71,9 @@ Socket programming finds applications in various domains, including web developm
 ## PROGRAM :
 ### CLIENT :
 ```
+Developed by : NITHYA D
+Reg no : 212223240110
+
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -90,6 +93,9 @@ break
 
 ### SERVER :
 ```
+Developed by : NITHYA D
+Reg no : 212223240110
+
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
