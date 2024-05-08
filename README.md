@@ -75,20 +75,19 @@ Developed by : NITHYA D
 Reg no : 212223240110
 
 import socket
+from datetime import datetime
 s=socket.socket()
 s.bind(('localhost',8000))
 s.listen(5)
 c,addr=s.accept()
-while True:
-i=input("Enter a data: ")
-c.send(i.encode())
+print("Client Address : ",addr)
+now = datetime.now()
+c.send(now.strftime("Date: %d/%m/%Y and Time: %H:%M:%S").encode())
 ack=c.recv(1024).decode()
 if ack:
-print(ack)
-continue
-else:
+ print(ack)
 c.close()
-break
+
 ```
 
 ### SERVER :
@@ -99,9 +98,9 @@ Reg no : 212223240110
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
-while True:
- print(s.recv(1024).decode())
- s.send("Acknowledgement Recived".encode())
+print(s.getsockname())
+print(s.recv(1024).decode())
+s.send("acknowledgement recived from the server".encode())
 ```
 
 ## OUTPUT :
